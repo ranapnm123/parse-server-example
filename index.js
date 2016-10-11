@@ -12,13 +12,13 @@ if (!databaseUri) {
 }
 
 var api = new ParseServer({
-  databaseURI: databaseUri || 'mongodb://localhost:27017/dev',
+  databaseURI: databaseUri || 'mongodb://toddFisher:Sharemeeha12@iad1-c17-0.mongo.objectrocket.com:51166,iad1-c17-1.mongo.objectrocket.com:51166,iad1-c17-2.mongo.objectrocket.com:51166/meehaParseDB?ssl=true',
   cloud: process.env.CLOUD_CODE_MAIN || __dirname + '/cloud/main.js',
-  appId: process.env.APP_ID || 'myAppId',
-  masterKey: process.env.MASTER_KEY || '', //Add your master key here. Keep it secret!
-  serverURL: process.env.SERVER_URL || 'http://localhost:1337/parse',  // Don't forget to change to https if needed
+  appId: process.env.APP_ID || 'aAKE56oW7xxnATteTMsoF3eDt9V4U8jQiDG8TNI0',
+  masterKey: process.env.MASTER_KEY || 'w2r1OFWyA0Gn84MSdxS33fvO6iKwQ1rIOwHPvd02', //Add your master key here. Keep it secret!
+  serverURL: process.env.SERVER_URL || 'https://meeha.herokuapp.com/parse',  // Don't forget to change to https if needed
   liveQuery: {
-    classNames: ["Posts", "Comments"] // List of classes to support for query subscriptions
+    classNames: ["ChatTable", "User"] // List of classes to support for query subscriptions
   }
 });
 // Client-keys like the javascript key or the .NET key are not necessary with parse-server
